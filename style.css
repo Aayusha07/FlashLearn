@@ -1,0 +1,261 @@
+body, h1, h2, h3, p {
+  
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3ebf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.dashboard {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-left h1 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+.menu-btn {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header-right .profile-pic {
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stat-box-1 {
+  background-color: #f5fbd8;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 40%;
+}
+
+.stat-box {
+  background-color: #ece6f9;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 40%;
+}
+
+.stat-number {
+  font-size: 1.8em;
+  color: #d496f5;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #d496f5;
+}
+
+.stat-number-1 {
+  font-size: 1.8em;
+  color: #abb077;
+  margin-bottom: 5px;
+}
+
+.stat-label-1 {
+  font-size: 0.9em;
+  color: #abb077;
+}
+/* Progress bar section */
+.progressbar {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.progressbar h2 {
+  font-size: 1.2em;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+/* Progress meter container */
+.progress-meter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Progress bar background */
+.progress-bar {
+  width: 80%;
+  height: 15px;
+  background-color: #d6d4d4;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Actual progress fill */
+.progress {
+  height: 100%;
+  background-color: #81b98f; /* Green color for the progress */
+  border-radius: 10px;
+}
+
+/* Progress percentage text */
+.progress-percentage {
+  font-size: 1.2em;
+  color: #555;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* Classes section */
+.classes h2 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.class-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.class-info .class-category {
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.class-info h3 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.class-info .class-teacher {
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Footer navigation buttons */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.nav-btn {
+  background-color: #2771c1;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.add-btn {
+  background-color: #d32f2f;
+}
+
+.nav-btn:hover {
+  background-color: #17497e;
+}
+
+.add-btn:hover {
+  background-color: #e64a19;
+}
+
+
+/* Container for flashcard controls */
+.flashcard-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* General style for buttons */
+.control-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.control-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Specific styling for Prev button */
+.prev-btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Specific styling for Next button */
+.next-btn i {
+  margin-left: 8px; /* Space between icon and text */
+}
+
+/* Specific styling for Flip button */
+.flip-btn i {
+  margin-left: 8px; /* Space between text and icon */
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 480px) {
+  .flashcard-controls {
+      flex-direction: column;
+  }
+  .control-btn {
+      margin-bottom: 10px;
+      width: 100%;
+  }
+}
