@@ -31,13 +31,13 @@
               <p class="stat-label-1">Decks created</p>
           </div>
       </div>
-      <section class="progressbar">
+      <section class="progressbar1">
         <h2>Progress-Bar</h2>
         <div class="progress-meter">
-          <div class="progress-bar">
-            <div class="progress" style="width: 70%;"></div>
+          <div class="progress-bar1">
+            <div class="progress1" style="width: 70%;"></div>
           </div>
-          <span class="progress-percentage">70%</span>
+          <span class="progress-percentage1">70%</span>
         </div>
       </section>
 
@@ -65,9 +65,28 @@
       <button class="nav-btn">
           <i class="fas fa-home"></i>
       </button>
-      <button class="nav-btn add-btn">
+      <button class="nav-btn add-btn" id="open-modal-btn">
           <i class="fas fa-plus"></i>
       </button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-btn">&times;</span>
+            <form id="flashcard-form">
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <input type="text" id="question" name="question" placeholder="Enter your question" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="answer">Answer:</label>
+                    <input type="text" id="answer" name="answer" placeholder="Enter the answer" required>
+                </div>
+    
+                <button type="submit">Add Flashcard</button>
+            </form>
+        </div>
+    </div>
       <button class="nav-btn">
           <i class="fas fa-user"></i>
       </button>

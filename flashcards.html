@@ -10,26 +10,85 @@
 </head>
 <body>
   <div class="dashboard">
-    <header>
-        <div class="header-left">
-          <button class="menu-btn">☰</button>
-          <h1>Flashcards</h1>
-        </div>
-        <div class="header-right">
-          <img src="profile.png" alt="Profile" class="profile-pic">
+    
+    <div class="container">
+      <div class="header">
+        <a href="index.html" class="back-arrow">&#8592;</a>
+          <h1>1000 Words Alphabetically</h1>
+          <nav>
+              <ul>
+                  <li class="active">Decks</li>
+                  
+              </ul>
+          </nav>
       </div>
-    </header>
-  <div class="flashcard-controls">
-    <button class="control-btn prev-btn">
-        <i class="fas fa-arrow-left"></i> Prev
+      <div class="deck-list">
+          <div class="deck" onclick="openDeck('Letter A')">
+              <span>Letter A</span>
+              <div class="progress">
+                  <div class="progress-bar" style="width: 50%;"></div>
+              </div>
+              <span class="deck-progress">4/82</span>
+          </div>
+          <div class="deck" onclick="openDeck('Letter B')">
+              <span>Letter B</span>
+              <div class="progress">
+                  <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <span class="deck-progress">0/60</span>
+          </div>
+
+          <div class="deck" onclick="openDeck('Letter C')">
+            <span>Letter C</span>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <span class="deck-progress">0/60</span>
+        </div>
+
+        <div class="deck" onclick="openDeck('Letter D')">
+          <span>Letter D</span>
+          <div class="progress">
+              <div class="progress-bar" style="width: 0%;"></div>
+          </div>
+          <span class="deck-progress">0/60</span>
+      </div>
+
+      <div class="deck" onclick="openDeck('Letter E')">
+        <span>Letter E</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 0%;"></div>
+        </div>
+        <span class="deck-progress">0/60</span>
+    </div>
+    
+
+    <div class="deck" onclick="openDeck('Letter F')">
+      <span>Letter F</span>
+      <div class="progress">
+          <div class="progress-bar" style="width: 0%;"></div>
+      </div>
+      <span class="deck-progress">0/60</span>
+  </div>
+      </div>
+  </div>
+  
+  <!-- Flashcard section to display when a deck is clicked -->
+  <div id="flashcard-container" style="display: none;">
+      <!-- Flashcards will be dynamically inserted here -->
+  </div>
+  <footer>
+    <button class="nav-btn">
+        <i class="fas fa-home"></i>
     </button>
-    <button class="control-btn flip-btn">
-        Flip <i class="fas fa-sync-alt"></i>
+    <button class="nav-btn add-btn">
+        <i class="fas fa-plus"></i>
     </button>
-    <button class="control-btn next-btn">
-        Next <i class="fas fa-arrow-right"></i>
+    <button class="nav-btn">
+        <i class="fas fa-user"></i>
     </button>
-</div>
-  <script src="script.js"></script>
+</footer>
+
+  
 </body>
 </html>

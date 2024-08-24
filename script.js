@@ -1,50 +1,25 @@
-// Example data for decks
-const decks = [
-  {
-      title: 'Math Basics',
-      studied: 15,
-      total: 20
-  },
-  {
-      title: 'Spanish Vocabulary',
-      studied: 10,
-      total: 50
-  },
-  {
-      title: 'History Dates',
-      studied: 25,
-      total: 30
-  }
-];
+// Get the modal element
+var modal = document.getElementById('modal');
 
-// Function to generate the deck UI
-function loadDecks() {
-  const container = document.getElementById('decks-container');
-  container.innerHTML = ''; // Clear existing decks
+// Get the button that opens the modal
+var openModalBtn = document.getElementById('open-modal-btn');
 
-  decks.forEach(deck => {
-      const deckElement = document.createElement('div');
-      deckElement.classList.add('deck');
+// Get the <span> element that closes the modal
+var closeModalBtn = document.getElementById('close-modal-btn');
 
-      const progressPercentage = Math.round((deck.studied / deck.total) * 100);
-
-      deckElement.innerHTML = `
-          <h3 class="deck-title">${deck.title}</h3>
-          <div class="progress-container">
-              <div class="progress-bar">
-                  <div class="progress" style="width: ${progressPercentage}%;"></div>
-              </div>
-              <span class="progress-percentage">${progressPercentage}%</span>
-          </div>
-          <div class="deck-info">
-              <p>${deck.studied} / ${deck.total} cards studied</p>
-              <button class="study-button">Study Now</button>
-          </div>
-      `;
-
-      container.appendChild(deckElement);
-  });
+// When the user clicks the button, open the modal 
+openModalBtn.onclick = function() {
+    modal.style.display = 'block';
 }
 
-// Load decks on page load
-document.addEventListener('DOMContentLoaded', loadDecks);
+// When the user clicks on <span> (x), close the modal
+closeModalBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// When the user clicks anywhere outside of the modal content, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

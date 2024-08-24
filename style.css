@@ -90,18 +90,18 @@ header {
   color: #abb077;
 }
 /* Progress bar section */
-.progressbar {
-  margin: 15px 0;
-  padding: 15px;
+.progressbar1 {
+  margin: 10px 0;
+  padding: 10px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(8, 8, 8, 0.1);
 }
 
 /* Section title */
-.progressbar h2 {
-  font-size: 1.2em;
-  color: #0d0d0d;
+.progressbar1 h2 {
+  font-size: 1.1em;
+  color: #040404;
   margin-bottom: 20px;
 }
 
@@ -113,17 +113,17 @@ header {
 }
 
 /* Progress bar background */
-.progress-bar {
+.progress-bar1 {
   width: 80%;
-  height: 15px;
+  height: 9px;
   background-color: #d6d4d4;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
 
 /* Actual progress fill */
-.progress {
+.progress1 {
   height: 100%;
   background-color: #81b98f; /* Green color for the progress */
   border-radius: 10px;
@@ -177,8 +177,8 @@ footer {
 }
 
 .nav-btn {
-  background-color: #2771c1;
-  color: white;
+  background-color: #d5acf8;
+  color: rgb(255, 252, 252);
   padding: 10px;
   border: none;
   border-radius: 50%;
@@ -204,58 +204,191 @@ footer {
 }
 
 
-/* Container for flashcard controls */
-.flashcard-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-}
+
 a {
   text-decoration: none;
 }
 
-/* General style for buttons */
-.control-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background-color: #d8e4fb;
+  color: rgb(57, 70, 130);
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+nav li {
+  cursor: pointer;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+nav .active {
+  color: rgba(22, 38, 104, 0.779);
+  font-weight: bold;
+}
+
+.deck-list {
+  padding: 20px;
+}
+
+.deck {
+  background-color: #f8f9fc;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1em;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-/* Hover effect for buttons */
-.control-btn:hover {
-  background-color: #0056b3;
+.deck:hover {
+  background-color: #edf2fa;
 }
 
-/* Specific styling for Prev button */
-.prev-btn i {
-  margin-right: 8px; /* Space between icon and text */
+.progress {
+  flex: 1;
+  height: 5px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
 }
 
-/* Specific styling for Next button */
-.next-btn i {
-  margin-left: 8px; /* Space between icon and text */
+.progress-bar {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 5px;
 }
 
-/* Specific styling for Flip button */
-.flip-btn i {
-  margin-left: 8px; /* Space between text and icon */
+.deck-progress {
+  color: #64748b;
+  font-size: 14px;
 }
 
-/* Responsive layout adjustment */
-@media (max-width: 480px) {
-  .flashcard-controls {
-      flex-direction: column;
-  }
-  .control-btn {
-      margin-bottom: 10px;
-      width: 100%;
-  }
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: rgb(115, 18, 179);
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.back-arrow:hover {
+  color: #060119;
+}
+
+
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#flashcard-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
